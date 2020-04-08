@@ -52,8 +52,8 @@ open class CTShowcaseView: UIView {
     - parameter title: Title to display in the showcase
     - parameter message: Message to display in the showcase
     */
-    public convenience init(title: String, message: String) {
-        self.init(title: title, message: message, key: nil, dismissHandler: nil)
+    public convenience init(title: String, message: String, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)) {
+        self.init(title: title, message: message, key: nil, bgColor: bgColor, dismissHandler: nil)
     }
     
     /**
