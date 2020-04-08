@@ -64,7 +64,7 @@ open class CTShowcaseView: UIView {
     - parameter key: An optional key to prevent the showcase from getting displayed again if it was displayed before
     - parameter dismissHandler: An optional handler to be executed after the showcase is dismissed by tapping
     */
-    public init(title: String, message: String, key: String?, dismissHandler: (() -> Void)?) {
+    public init(title: String, message: String, key: String?, bgColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75), dismissHandler: (() -> Void)?) {
 
         titleLabel = UILabel(frame: CGRect.zero)
         messageLabel = UILabel(frame: CGRect.zero)
@@ -82,7 +82,7 @@ open class CTShowcaseView: UIView {
         self.dismissHandler = dismissHandler
         
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+        backgroundColor = bgColor
         
         titleLabel.numberOfLines = 0
         titleLabel.translatesAutoresizingMaskIntoConstraints = true
